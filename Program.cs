@@ -14,6 +14,8 @@ public static class Program
             text = "Hello, I am a sad robot. I can only say sad things."
         };
 
-        utter.Display();
+        utter.DisplayWithInterrupt(10);
+
+        var name = AnsiConsole.Ask<string>("[green]What's your name?[/]");
     }
 }
