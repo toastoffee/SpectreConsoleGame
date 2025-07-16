@@ -11,11 +11,54 @@ public static class Program
         {
             speakerColor = "bold red",
             speaker = "Robot",
-            text = "Hello, I am a sad robot. I can only say sad things."
+            sentence = "Hello, I am a sad robot. I can only say sad things."
         };
 
-        utter.DisplayWithInterrupt(10);
+        UtteranceDisplay.display_impl(utter, new UtteranceDisplay.Options
+        {
+            enableTypeWritter = true,
+            enableTypeWritterSkip = true,
+            typeWritterInterval_ms = 20,
+            enableAutoContinue = true,
+            startDelay_ms = 1000
+        });
 
-        var name = AnsiConsole.Ask<string>("[green]What's your name?[/]");
+        UtteranceDisplay.display_impl(utter, new UtteranceDisplay.Options
+        {
+            enableTypeWritter = true,
+            enableTypeWritterSkip = true,
+            typeWritterInterval_ms = 20,
+            enableAutoContinue = true,
+            startDelay_ms = 1000
+        });
+
+        //UtteranceDisplay.display_impl(utter, new UtteranceDisplay.Options
+        //{
+        //    enableTypeWritter = false,
+        //    enableTypeWritterSkip = true,
+        //    typeWritterInterval_ms = 20,
+        //    enableAutoContinue = true,
+        //    startDelay_ms = 1000
+        //});
+
+        //UtteranceDisplay.display_impl(utter, new UtteranceDisplay.Options
+        //{
+        //    enableTypeWritter = false,
+        //    enableTypeWritterSkip = true,
+        //    typeWritterInterval_ms = 20,
+        //    enableAutoContinue = true,
+        //    startDelay_ms = 1000
+        //});
+
+        //UtteranceDisplay.display_impl(utter, new UtteranceDisplay.Options
+        //{
+        //    enableTypeWritter = false,
+        //    enableTypeWritterSkip = true,
+        //    typeWritterInterval_ms = 20,
+        //    enableAutoContinue = true,
+        //    startDelay_ms = 1000
+        //});
+
+        //var name = AnsiConsole.Ask<string>("[green]What's your name?[/]");
     }
 }
